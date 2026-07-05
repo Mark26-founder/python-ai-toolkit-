@@ -4,8 +4,8 @@ import logging
 from dataclasses import dataclass, field
 from typing import Sequence, Type
 
-from retry.callbacks import AfterRetryHook, BeforeRetryHook, OnFailureHook, OnSuccessHook
-from retry.exceptions import RetryConfigurationError
+from .callbacks import AfterRetryHook, BeforeRetryHook, OnFailureHook, OnSuccessHook
+from .exceptions import RetryConfigurationError
 
 logger = logging.getLogger(__name__)
 
@@ -22,7 +22,9 @@ class RetryPolicy:
     max_delay: float = 60.0
     exponential_factor: float = 2.0
     jitter_enabled: bool = True
-    retry_exceptions: Sequence[Type[Exception]] = field(default_factory=lambda: (Exception,))
+    retry_exceptions: Sequence[Type[Exception]] = field(
+        default_factory=lambda: (ConnectionError, TimeoutError)
+    )
     
     # Lifecycle Hooks
     before_retry: BeforeRetryHook | None = None
