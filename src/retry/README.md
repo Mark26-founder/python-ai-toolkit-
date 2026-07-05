@@ -1,6 +1,6 @@
 # Retry Package — Python AI Toolkit
 
-A production-grade, provider-agnostic resilience utility built for Python 3.11+. This package provides robust retry mechanics natively supporting both synchronous and asynchronous workflows with configurable jittered exponential backoffs.
+A lightweight, provider-agnostic retry library for Python 3.11+. This package provides robust retry mechanics natively supporting both synchronous and asynchronous workflows with configurable jittered exponential backoffs.
 
 ## Architecture
 
