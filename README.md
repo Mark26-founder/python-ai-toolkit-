@@ -1,6 +1,6 @@
 # Python AI Toolkit
 
-> **A provider-agnostic Python library that delivers reusable infrastructure for building reliable, maintainable, and scalable AI applications.**
+> **Reusable infrastructure for building reliable AI applications in Python.**
 
 [![Python](https://img.shields.io/badge/Python-3.11+-blue?style=flat-square)](https://python.org)
 [![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
